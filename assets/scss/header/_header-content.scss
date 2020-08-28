@@ -6,45 +6,42 @@
 
     &__title
     {
+        font-family: $font-header;
+        font-size: $font-size-60;
         font-weight: 300;
         line-height: 1.2;
 
-        padding-bottom: 54px;
+        max-width: 1340px;
+        max-width: 1340px;
+        margin: auto;
+        margin: auto;
+        padding: 0 $gap 54px $gap;
 
         text-align: center;
         letter-spacing: .078em;
 
         color: $color-light;
-        max-width: 1340px;
-        margin: auto;
-        padding-right: $gap;
-        padding-left: $gap;
-        max-width: 1340px;
-        margin: auto;
-        padding-right: $gap;
-        padding-left: $gap;
 
+        @include lg-min
+        {
+            font-size: $font-size-60;
+        };
+        @include lg-md
+        {
+            font-size: $font-size-40;
+        };
+        @include md
+        {
+            font-size: 1.875rem;
 
-
-        // @include lg-min {
-        //     margin-bottom: 53px;
-
-        // }
-        // @include lg-md{
-        // margin-bottom: 0px;   
-        // }
-        // @include md{
-        //  margin-bottom: 33px;
-        // }
+            padding-bottom: 33px;
+        }
     }
-    
-
-
-       &__container{
+    &__container
+    {
         max-width: 1340px;
         margin: auto;
-        padding-right: $gap;
-        padding-left: $gap;
+        padding: 0 $gap;
     }
     &__buttons
     {
@@ -52,31 +49,53 @@
 
         justify-content: center;
     }
-    &__btn{
-        font-size:$font-size-18;
+    &__btn
+    {
+        font-size: $font-size-18;
 
         display: block;
-    
+
         min-width: 250px;
         height: 60px;
         padding: 18px $gap;
-    
+
         transition: background-color .5s ;
         text-align: center;
         letter-spacing: .1em;
-        
-    
+
         border: 2px solid $color-light;
         background-color: rgba(255,255,255,.1);
+
+        @include lg-min
+        {
+            min-width: 250px;
+            height: 60px;
+        };
+        @include lg-md
+        {
+            font-size: $font-size;
+
+            min-width: 200px;
+            height: 50px;
+            padding: 15px $gap;
+        };
+        @include md
+        {
+            font-size: $font-size;
+
+            min-width: 170px;
+            height: 40px;
+            padding: 8px $gap;
+        }
         &:hover,
         &:focus
         {
             background-color: $color-accent ;
         }
-        &:first-of-type{
-        margin-right:$gap;
-                     }
+        &:first-of-type
+        {
+            margin-right: $gap;
+        }
     }
-    
 }
 

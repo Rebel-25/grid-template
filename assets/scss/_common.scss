@@ -1,7 +1,6 @@
 *
 {
     box-sizing: border-box;
-    
 }
 
 html
@@ -9,42 +8,29 @@ html
     font-family: $font-main;
     font-size: $font-size;
 
+    overflow-x: hidden;
     overflow-y: scroll;
-    overflow-x: hidden; 
 
     color: $color-gray;
 }
-h5{
-    font-size: 18px;
-    letter-spacing: 0.08em;
-    margin: 0 ;
-}
-
-h1
+h5
 {
-    font-family: $font-header;
-    font-size: $font-size-60;
+    font-size: 18px;
 
-    @include lg-min
-    {
-        font-size: $font-size-60;
-    };
-    @include lg-md
-    {
-        font-size:$font-size-40;
-    };
-    @include md
-    {
-        font-size: $font-size-40;
-    }
+    margin: 0 ;
+
+    letter-spacing: .08em;
 }
-a{
+
+a
+{
     text-decoration: none;
+
     color: $color-light;
 }
 
 
 
-           
+
 
 

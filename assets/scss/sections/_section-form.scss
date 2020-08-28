@@ -1,92 +1,123 @@
-.form-section{
-    background-color:$color-primary;
-    min-height: $gap*6; 
-       
-    &__conteiner{
-        max-width: 1340px;
-        margin: 0 auto;
-        min-height: $gap*6;
-        padding: 30px $gap;
-      
-    }
-   &__form{
-    display: grid;
-    gap: $gap;
-    grid-template-areas: 'fr1 fr2 fr3';
-    grid-template-columns: repeat(3,1fr);
-    @include md{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-areas: 'fr1 fr1' 'fr2 fr3 ';
-    }
-    @include sm{
-        grid-template-columns:1fr;
-        grid-template-areas: 'fr1' 'fr2' 'fr3';
-        
+.form-section
+{
+    min-height: $gap*6;
 
-      
+    background-color: $color-primary;
+
+    &__conteiner
+    {
+        max-width: 1340px;
+        min-height: $gap*6;
+        margin: 0 auto;
+        padding: 30px $gap;
     }
-   }
-   
-&__name{
-    border: none;
-    padding: 21px 30px;
-    width: 100%;
-    outline: none;
-    background-color: #38405A;
-    letter-spacing: 0.1rem;
-    font-size: $font-size-18;
-  
-     &:focus{
-    color:$color-light;
-    border-bottom: 1px solid $color-light;
- }
-&:focus::placeholder{
-    color:$color-light;
-    z-index: 1;
-}
-}
-&__email{
-    border: none;
-    padding: 21px 30px;
-    width: 100%;
-    outline: none;
-    background-color: #38405A;
-    font-size: $font-size-18;
-    letter-spacing: 0.1em;
-    &:focus{
-        color:$color-light;
-        border-bottom: 1px solid $color-light;
-     }
-    &:focus::placeholder{
-        color:$color-light;
+    &__form
+    {
+        display: grid;
+
+        gap: $gap;
+        grid-template-areas: 'fr1 fr2 fr3';
+        grid-template-columns: repeat(3,1fr);
+        @include md
+        {
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: 'fr1 fr1' 'fr2 fr3 ';
+        }
+        @include sm
+        {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'fr1' 'fr2' 'fr3';
+        }
     }
-}
-&__namebox{
-    grid-area: fr1;
-}
-&__emailbox{
-    grid-area: fr2;
-}
-&__button{
-    grid-area: fr3;
-    border: none;
-    padding: 21px 18px;
-    width: 100%;
-    color: $color-gray-light;
-    background-color: #424B63;
-    letter-spacing: 0.1rem;
-    font-size: $font-size-18;
-    transition:background-color 1.0s ease;
-    &:hover{
-        color:$color-light;
-        border: 1px solid $color-light;
-        background-color:$color-accent ;
-        
-     }
-    &:hover::placeholder{
-        color:$color-light;
+
+    &__name
+    {
+        font-size: $font-size-18;
+
+        width: 100%;
+        padding: 21px 30px;
+
+        letter-spacing: .1rem;
+
+        border: none;
+        outline: none;
+        background-color: #38405a;
+
+        &:focus,
+        &:hover
+        {
+            color: $color-light;
+            border-bottom: 1px solid $color-light;
+        }
+        &:focus,
+        &:hover::placeholder
+        {
+            color: $color-light;
+        }
     }
-}
+    &__email
+    {
+        font-size: $font-size-18;
+
+        width: 100%;
+        padding: 21px 30px;
+
+        letter-spacing: .1em;
+
+        border: none;
+        outline: none;
+        background-color: #38405a;
+        &:focus,
+        &:hover
+        {
+            color: $color-light;
+            border-bottom: 1px solid $color-light;
+        }
+        &:focus,
+        &:hover::placeholder
+        {
+            color: $color-light;
+        }
+    }
+    &__namebox
+    {
+        grid-area: fr1;
+    }
+    &__emailbox
+    {
+        grid-area: fr2;
+    }
+    &__button
+    {
+        font-size: $font-size-18;
+
+        width: 100%;
+        padding: 21px 18px;
+
+        transition: background-color .5s ease;
+        transition: border-color .5s ease;
+        letter-spacing: .1rem;
+
+        color: $color-gray-light;
+        border: none;
+        border: 1px solid #424b63;
+        background-color: #424b63;
+
+        grid-area: fr3;
+
+        &:hover,
+        &:focus
+        {
+            color: $color-light;
+            border: 1px solid $color-light;
+            background-color: $color-accent ;
+        }
+        &:hover,
+        &:focus::placeholder
+        {
+            color: $color-light;
+        }
+    }
 }
 
 

@@ -1,15 +1,17 @@
 
 .header-navbar
-{  display: flex;   
+{
+    display: flex;
     &__link
     {
-        font-size:$font-size-18;
+        font-size: $font-size-18;
 
         display: block;
 
         padding: $gap;
-        padding-right: 0;
         padding: 0  0  $gap 40px ;
+        padding-right: 0;
+
         transition: color .5s;
         letter-spacing: .09em;
         &:hover,
@@ -21,27 +23,32 @@
     &__list
     {
         display: grid;
+
         width: 100%;
+
         letter-spacing: .09em;
+
         grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
         justify-content: end;
         @include unlist ( 0 -$gap 0 0);
-        @include md {
+        @include md
+        {
+            position: absolute;
+            top: 0;
+            right: 200px;
+
             display: block;
-           background: transparent;
-           position: absolute;
-           right: 200px;
-           top: 0;
-           }
+
+            background: transparent;
+        }
     }
-    
+
     &__btn
     {
         display: none;
 
-        padding:$gap;
+        padding: $gap;
     }
 }
 
 
- 
