@@ -1,0 +1,82 @@
+.header-content
+{
+    position: relative;
+
+    width: 100%;
+
+    &__title
+    {
+        font-weight: 300;
+        line-height: 1.2;
+
+        padding-bottom: 54px;
+
+        text-align: center;
+        letter-spacing: .078em;
+
+        color: $color-light;
+        max-width: 1340px;
+        margin: auto;
+        padding-right: $gap;
+        padding-left: $gap;
+        max-width: 1340px;
+        margin: auto;
+        padding-right: $gap;
+        padding-left: $gap;
+
+
+
+        // @include lg-min {
+        //     margin-bottom: 53px;
+
+        // }
+        // @include lg-md{
+        // margin-bottom: 0px;   
+        // }
+        // @include md{
+        //  margin-bottom: 33px;
+        // }
+    }
+    
+
+
+       &__container{
+        max-width: 1340px;
+        margin: auto;
+        padding-right: $gap;
+        padding-left: $gap;
+    }
+    &__buttons
+    {
+        display: flex;
+
+        justify-content: center;
+    }
+    &__btn{
+        font-size:$font-size-18;
+
+        display: block;
+    
+        min-width: 250px;
+        height: 60px;
+        padding: 18px $gap;
+    
+        transition: background-color .5s ;
+        text-align: center;
+        letter-spacing: .1em;
+        
+    
+        border: 2px solid $color-light;
+        background-color: rgba(255,255,255,.1);
+        &:hover,
+        &:focus
+        {
+            background-color: $color-accent ;
+        }
+        &:first-of-type{
+        margin-right:$gap;
+                     }
+    }
+    
+}
+

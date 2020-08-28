@@ -1,0 +1,14 @@
+.header
+{
+    display: flex;
+
+    min-height: 111.5vh;
+    padding: 100px 0;
+
+    background-color: $color-gray;
+    background-image: url(../img/img-header.png);
+    background-position: 50% 50%;
+    background-size: cover;
+
+    align-items: center;
+}

@@ -1,0 +1,93 @@
+.form-section{
+    background-color:$color-primary;
+    min-height: $gap*6; 
+       
+    &__conteiner{
+        max-width: 1340px;
+        margin: 0 auto;
+        min-height: $gap*6;
+        padding: 30px $gap;
+      
+    }
+   &__form{
+    display: grid;
+    gap: $gap;
+    grid-template-areas: 'fr1 fr2 fr3';
+    grid-template-columns: repeat(3,1fr);
+    @include md{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 'fr1 fr1' 'fr2 fr3 ';
+    }
+    @include sm{
+        grid-template-columns:1fr;
+        grid-template-areas: 'fr1' 'fr2' 'fr3';
+        
+
+      
+    }
+   }
+   
+&__name{
+    border: none;
+    padding: 21px 30px;
+    width: 100%;
+    outline: none;
+    background-color: #38405A;
+    letter-spacing: 0.1rem;
+    font-size: $font-size-18;
+  
+     &:focus{
+    color:$color-light;
+    border-bottom: 1px solid $color-light;
+ }
+&:focus::placeholder{
+    color:$color-light;
+    z-index: 1;
+}
+}
+&__email{
+    border: none;
+    padding: 21px 30px;
+    width: 100%;
+    outline: none;
+    background-color: #38405A;
+    font-size: $font-size-18;
+    letter-spacing: 0.1em;
+    &:focus{
+        color:$color-light;
+        border-bottom: 1px solid $color-light;
+     }
+    &:focus::placeholder{
+        color:$color-light;
+    }
+}
+&__namebox{
+    grid-area: fr1;
+}
+&__emailbox{
+    grid-area: fr2;
+}
+&__button{
+    grid-area: fr3;
+    border: none;
+    padding: 21px 18px;
+    width: 100%;
+    color: $color-gray-light;
+    background-color: #424B63;
+    letter-spacing: 0.1rem;
+    font-size: $font-size-18;
+    transition:background-color 1.0s ease;
+    &:hover{
+        color:$color-light;
+        border: 1px solid $color-light;
+        background-color:$color-accent ;
+        
+     }
+    &:hover::placeholder{
+        color:$color-light;
+    }
+}
+}
+
+
+
