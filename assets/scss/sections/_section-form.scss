@@ -35,24 +35,34 @@
         font-size: $font-size-18;
 
         width: 100%;
-        padding: 21px 30px;
+        // padding: 19px 31px;
+        height: 60px;
+        padding: 0 31px;
 
-        letter-spacing: .1rem;
+        transition: background-color .5s,border-color .5s;
+        letter-spacing: .15em;
 
-        border: none;
-        outline: none;
+        border: 1px solid #38405a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         background-color: #38405a;
-
         &:focus,
         &:hover
         {
-            color: $color-light;
-            border-bottom: 1px solid $color-light;
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-bottom-color: $color-light ;
+            background-color: rgba(255, 255, 255, .20);
+;
         }
         &:focus,
         &:hover::placeholder
         {
-            color: $color-light;
+            color: rgba(255, 255, 255, .20);
+        }
+        &::placeholder
+        {
+            font-size: 1.125rem;
+
+            color: rgba(255, 255, 255, .20);
         }
     }
     &__email
@@ -60,23 +70,34 @@
         font-size: $font-size-18;
 
         width: 100%;
-        padding: 21px 30px;
+        height: 60px;
+        padding: 0 31px;
 
-        letter-spacing: .1em;
+        transition: background-color .5s,border-color .5s;
+        letter-spacing: .15em;
 
-        border: none;
-        outline: none;
+        border: 1px solid #38405a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         background-color: #38405a;
         &:focus,
         &:hover
         {
-            color: $color-light;
-            border-bottom: 1px solid $color-light;
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-bottom-color: $color-light ;
+            background-color: rgba(255, 255, 255, .20);
+;
         }
         &:focus,
         &:hover::placeholder
         {
-            color: $color-light;
+            color: rgba(255, 255, 255, .20);
+        }
+
+        &::placeholder
+        {
+            font-size: 1.125rem;
+
+            color: rgba(255, 255, 255, .20);
         }
     }
     &__namebox
@@ -92,30 +113,27 @@
         font-size: $font-size-18;
 
         width: 100%;
-        padding: 21px 18px;
+       height: 60px;
 
-        transition: background-color .5s ease;
-        transition: border-color .5s ease;
-        letter-spacing: .1rem;
+        transition: background-color .5s,border-color .5s;
+        letter-spacing: .1em;
 
-        color: $color-gray-light;
-        border: none;
+        color: $color-light;
         border: 1px solid #424b63;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         background-color: #424b63;
 
         grid-area: fr3;
+
+        
 
         &:hover,
         &:focus
         {
             color: $color-light;
-            border: 1px solid $color-light;
+            border-color:  #fff;
+            border-bottom-color: $color-light ;
             background-color: $color-accent ;
-        }
-        &:hover,
-        &:focus::placeholder
-        {
-            color: $color-light;
         }
     }
 }

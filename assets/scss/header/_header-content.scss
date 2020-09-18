@@ -15,10 +15,10 @@
         max-width: 1340px;
         margin: auto;
         margin: auto;
-        padding: 0 $gap 54px $gap;
+        padding: 0 $gap 53px $gap;
 
         text-align: center;
-        letter-spacing: .078em;
+        letter-spacing: .08em;
 
         color: $color-light;
 
@@ -29,12 +29,14 @@
         @include lg-md
         {
             font-size: $font-size-40;
+
+            padding: 0 0 43px 0;
         };
         @include md
         {
             font-size: 1.875rem;
 
-            padding-bottom: 33px;
+            padding: 0 0 43px 0;
         }
     }
     &__container
@@ -48,6 +50,13 @@
         display: flex;
 
         justify-content: center;
+        @include sm
+        {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
     }
     &__btn
     {
@@ -77,16 +86,31 @@
 
             min-width: 200px;
             height: 50px;
-            padding: 15px $gap;
+            padding: 14px $gap;
         };
         @include md
         {
-            font-size: $font-size;
+            font-size: 1rem;
 
             min-width: 170px;
             height: 40px;
-            padding: 8px $gap;
+            padding-top: 10px;
+
+            letter-spacing: .05em;
         }
+        @include sm
+        {
+            &:last-of-type
+            {
+                margin-top: 20px ;
+            }
+            &:first-child
+            {
+                margin-right: 0;
+            }
+        }
+
+
         &:hover,
         &:focus
         {

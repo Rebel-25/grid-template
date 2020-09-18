@@ -1,7 +1,7 @@
 .skills
 {
     margin-bottom: 30px;
-    padding: 10px 10px 10px 10px;
+    padding: $gap/2;
 
     @include sm-min
     {
@@ -20,7 +20,7 @@
 
         @include lg-min
         {
-            grid-gap:$gap / 2 ;
+            grid-gap: $gap / 2 ;
             grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a5 a6' 'a7 a8 a9 a6';
         }
         @include lg-md
@@ -46,31 +46,36 @@
         justify-content: center;
     }
     &__btn-accent
-{
-    font-size: $font-size-18;
+    {
+        font-size: $font-size-18;
 
-    display: block;
+        display: flex;
 
-    min-width: 250px;
-    height: 65px;
-    padding: 18px $gap;
-    min-width: 350px;
-    border: px solid $color-primary;
-    background-color: rgba(45,54,81,.8);
+        min-width: 350px;
+        height: 60px;
+        padding: 18px $gap;
 
-    transition: background-color .5s ;
-    text-align: center;
-    letter-spacing: .1em;
+        transition: background-color .5s ;
+        letter-spacing: .1em;
+
+        border: 1px solid $color-primary;
+        background-color: rgba(45,54,81,.8);
+
+        align-items: center;
+        justify-content: center;
+
+        @include sm
+        {
+            width: 100%;
+            min-width: 0;
+        }
 
 
-    &:hover,
-    &:focus{
-     background-color: $color-accent ;
-
+        &:hover,
+        &:focus
+        {
+            background-color: $color-accent ;
+        }
     }
-    @include sm{
-        width: 100%;
-    }
-           }
 }
 

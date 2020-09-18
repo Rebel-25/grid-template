@@ -1,7 +1,19 @@
 .section-posts
 {
-    padding: $gap;
+    padding: 100px 0 ;
 
+    @include lg-md
+    {
+        padding: 80px 0 ;
+    }
+    @include md-sm
+    {
+        padding: 60px 0 ;
+    }
+    @include sm
+    {
+        padding: 60px 0 ;
+    }
     &__conteiner
     {
         max-width: 1340px;
@@ -13,7 +25,8 @@
         font-family: $font-header;
         font-size: 2.5rem;
 
-        padding: 45px 0 $gap 0;
+        margin-top: 0;
+        margin-bottom: 56px;
 
         letter-spacing: .25rem;
 
@@ -22,18 +35,27 @@
         @include lg-md
         {
             font-size: $font-size-32;
+
+            margin-bottom: 42px;
         }
         @include md-sm
         {
             font-size: $font-size-24 ;
+
+            margin-bottom: 36px;
         }
         @include sm
         {
             font-size: $font-size-24;
 
+            margin-bottom: 36px;
+
             text-align: center;
         }
     }
+
+
+
     &__posts
     {
         display: grid;
@@ -63,8 +85,6 @@
     &__blog
     {
         display: grid;
-
-        min-height: 550px;
 
         background-repeat: no-repeat;
         &:nth-of-type(1)
@@ -99,30 +119,77 @@
     }
     &__img
     {
-        min-height: 300px;
+        display: grid;
+        overflow: hidden;
+
+        width: 100%;
+        height: 100%;
+
+        transition: transform .5s ;
 
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
     }
+
+
+
+    &__link
+    {
+        display: grid;
+        overflow: hidden;
+
+        min-height: 300px;
+
+        grid-template-rows: 300px 1fr;
+
+        &:hover
+        {
+            .section-posts__content
+            {
+                background-color: rgba(99, 117, 136,.250) !important;
+            }
+
+            .section-posts__img
+            {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    &__contentup
+    {
+      overflow: hidden;
+    }
+
+
     &__content
     {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        overflow: hidden;
 
-        min-height: 250px;
-        padding: 0 $gap * 2;
+      
+        padding: $gap ;
 
+        transition: background-color .5s;
         text-align: center;
 
-        background-color: #eee;
+        background-color:rgba(229, 229, 229,0.5) !important;
 
-        justify-content: center;
+        align-content: center;
+        justify-items: center;
 
-        &  h4
+        h3
         {
-            font-family: $font-header;
-            font-size: $font-size-18;
+            font-family: 'Roboto Slab', serif;
+
+            color: $color-gray;
+        }
+
+        p
+        {
+            text-align: center;
 
             color: $color-gray;
         }
@@ -146,22 +213,24 @@
     {
         font-size: $font-size-18;
 
-        display: block;
+        display: flex;
 
         min-width: 350px;
         height: 60px;
         padding: 18px $gap;
 
         transition: background-color .5s;
-        text-align: center;
         letter-spacing: .1em;
 
-        border: 1px solid $color-gray-dark;
-        background-color: $color-gray-dark;
+        border: 1px solid #2d3651;
+        background-color: rgba(45, 54, 81, .8);
 
+        justify-content: center;
+        align-items: center;
         @include sm
         {
             width: 100%;
+            min-width: 0;
         }
 
         &:hover,
@@ -171,3 +240,4 @@
         }
     }
 }
+

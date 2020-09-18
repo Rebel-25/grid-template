@@ -8,9 +8,7 @@
 
         display: block;
 
-        padding: $gap;
-        padding: 0  0  $gap 40px ;
-        padding-right: 0;
+        padding: 0  0  $gap $gap*2;
 
         transition: color .5s;
         letter-spacing: .09em;
@@ -26,7 +24,7 @@
 
         width: 100%;
 
-        letter-spacing: .09em;
+        letter-spacing: 09em;
 
         grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
         justify-content: end;

@@ -1,76 +1,92 @@
 .footer
 {
-    min-height: 250px;
-    margin-top: 100px;
+    padding: 61px 20px 70px;
 
     background-color: $color-primary ;
-
-    &__menu
-    {
-        display: flex;
-
-        width: 224px;
-        margin-top: 50px;
-
-        justify-content: center;
-        justify-content: space-between;;
-    }
     &__conteiner
     {
         display: flex;
         flex-direction: column;
 
         max-width: 1340px;
-        min-height: 250px;
         margin: 0 auto;
 
         align-items: center;
+        margin-bottom: 50px;
     }
-    &__border
+
+    &__menu
     {
+        position: relative;
+
         display: flex;
-        flex-direction: column;
 
-        width: 75px;
-        height: 10px;
-        margin-top: 30px;
+        width: 237px;
+     
 
-        border-bottom: 2px solid #4b536a;
-    }
-    &__logo
-    {
-        font-size: $font-size;
-        line-height: 0;
+        justify-content: center;
+        justify-content: space-between;
 
-        margin-top: 30px;
+        &::after
+        {
+            position: absolute;
+            bottom: -30px;
+            left: calc(50% - 75px / 2);
 
-        text-align: center;
-    }
-    &__logo2
-    {
-        color: #fff;
-    }
-    &__logo > p
-    {
-        letter-spacing: .20rem;
+            width: 75px;
+            height: 2px;
+
+            content: '';
+
+            background-color: rgba(255, 255, 255, .1);
+        }
     }
     &__link
     {
-        padding: 0 10px 24px 10px ;
-
-        transition: border-color .5s ease;
-
-        border: 2px solid #fff;
-        background-color: $color-primary ;
-
+        transition: color .5s;
+        i
+        {
+            font-size: 35px;
+        }
 
         &:hover,
         &:focus
         {
-            border: 2px solid $color-accent;
+            color: chocolate;
         }
     }
+    &__title
+    {
+
+        display: block;
+        text-align: center;
+    
+        
+     
+    }
+
+    &__logo{
+        font-size: $font-size;
+        font-weight: 100;
+     
+
+        // margin-top: 30px;
+        margin-right: -.5em;
+
+        letter-spacing: .33em;
+    }
+    &__logo2
+    {
+        font-weight: 700;
+
+        letter-spacing: .05em;
+
+        color: #fff;
+        color: #e5e5e5;
+    }
 }
+
+
 
 
 
