@@ -1,20 +1,9 @@
 $(document).ready(function(){
 	$('.nav-icon').click(function(){
 		$(this).toggleClass('open');
-	});
-});
+		$('.header-navbar__list').toggleClass('open');
+		$('.header-navbar__list').fadeToggle (500);
 
-
-$(document).ready(function(){
-	$('.nav-icon').click(function(){
-		const drawer = document.getElementsByClassName('header-navbar__list');
-		$(drawer).toggleClass(function() {
-			if ($(this).is('.open-drawer')) {
-			  return "close-drawer";
-			} else {
-			  return "open-drawer";
-			}
-		  });
 
 	});
 });

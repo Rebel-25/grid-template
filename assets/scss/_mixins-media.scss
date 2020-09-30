@@ -243,3 +243,12 @@
         @content;
     }
 }
+
+
+@mixin md-height
+{
+    @media (max-height: 690px)
+    {
+        @content;
+    }
+}

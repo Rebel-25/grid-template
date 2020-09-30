@@ -1,7 +1,5 @@
 .section-about
 {
-    min-height: 652px;
-
     letter-spacing: .055em;
 
     background-color: $color-gray-light;
@@ -12,23 +10,28 @@
         display: grid;
 
         max-width: 1340px;
-        max-width: 1340px;
         margin: auto;
         padding: $gap*5 $gap $gap*5 $gap;
 
         background-color: $color-gray-light;
 
-        grid-template-areas: 'sd1 sd3 sd2 ';
-        grid-template-columns: 2fr .2fr   271px;
+        grid-template-areas: 'sd1  sd2';
+        grid-gap: 100px;
+        grid-template-columns: 1fr 271px;
         @include lg-md
         {
             padding-top: $gap*4 ;
             padding-bottom: $gap*4;
+
+            grid-gap: 40px;
         }
         @include md
         {
             padding-top: $gap*3 ;
             padding-bottom: $gap*3;
+
+            grid-gap: 20px;
+            grid-template-columns: 1fr 236px;
         }
         @include sm
         {
@@ -48,31 +51,43 @@
                 font-size: 1rem;
             }
         }
-        grid-area: sd1;
-
-        @include sm-min
-        {
-            p:first-of-type
-            {
-                position: relative;
-                &::after
-                {
-                    position: absolute;
-                    top: 0;
-                    right: -44px;
-
-                    width: 2px;
-                    height: 200px;
-
-                    content: '';
-
-                    background-color: rgba(99, 117, 136, .1);
-                }
-            }
-        }
+        grid-area: sd1;
         @include md
         {
             font-size: $font-size;
+        }
+        p:first-of-type
+        {
+            position: relative;
+            &::after
+            {
+                position: absolute;
+                top: 0;
+
+                width: 2px;
+                height: 200px;
+
+                content: '';
+
+                background-color: rgba(99, 117, 136, .1);
+
+                @include lg-min
+                {
+                    right: -50px;
+                }
+                @include lg-md
+                {
+                    right: -20px;
+                }
+                @include md-sm
+                {
+                    right: -10px;
+                }
+                @include sm
+                {
+                    display: none;
+                }
+            }
         }
         & p:first-of-type
         {
@@ -80,7 +95,7 @@
         }
         & p:last-of-type
         {
-           margin: 0;
+            margin: 0;
         }
     }
     &__title
@@ -117,22 +132,14 @@
     {
         display: grid;
 
-        padding: 10px 0 0 0;
-
         grid-area: sd2;
-        align-content: space-between;
+        align-content: center;
         justify-items: center;
-        @include lg-sm
-        {
-            align-content: center;
-        }
     }
     &__img
     {
         max-width: 100%;
         max-height: 480px;
-
-        background-position: 50% 50%;
     }
 }
 

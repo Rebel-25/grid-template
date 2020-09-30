@@ -8,10 +8,15 @@
 
         display: block;
 
-        padding: 0  0  $gap $gap*2;
+        padding: $gap*2 0 $gap $gap*2;
 
         transition: color .5s;
         letter-spacing: .09em;
+
+        @include md
+        {
+            padding: 20px;
+        }
         &:hover,
         &:focus
         {
@@ -32,12 +37,22 @@
         @include md
         {
             position: absolute;
-            top: 0;
-            right: 200px;
+            z-index: 2;
+            top: 120%;
+            right: 20px;
 
-            display: block;
+            display: none;
 
-            background: transparent;
+            width: auto;
+
+            text-align: right;
+
+            background-color: $color-gray-dark;
+        }
+
+        &.open
+        {
+            opacity: 90%;
         }
     }
 

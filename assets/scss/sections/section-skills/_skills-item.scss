@@ -2,11 +2,20 @@
 {
     position: relative;
 
+    display: grid;
     overflow: hidden;
 
-    min-height: calc(33.33vh - 20px * 0.66);
+    min-height: calc(33.33vh - 20px * .66);
+    padding: 20px;
 
     background-color: $color-primary;
+
+    align-items: center;
+    justify-items: center;
+    @include md-height
+    {
+        min-height: calc(230px - 20px * .66);
+    }
 
     &__image
     {
@@ -44,10 +53,8 @@
     &__link
     {
         display: flex;
-         
-        
+
         height: 100%;
-        
         padding: $gap;
 
         transition: color .5s;
@@ -68,7 +75,11 @@
         }
         .skill-item__link
         {
+            transition: background-color .5s;
+
+            opacity: .8;
             color: $color-accent;
+            background-color: $color-primary;
         }
     }
 }
